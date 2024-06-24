@@ -1,0 +1,13 @@
+import random
+def generate_password(length):
+    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+="
+    password = ''
+    for i in range(length):
+        password += random.choice(characters)
+    return password
+def main():
+    length = int(input("enter the desired length for the password: "))
+    password = generate_password(length)
+    print(f"generated password: {password}")
+if __name__ == "__main__":
+    main()
